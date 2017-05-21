@@ -36,4 +36,12 @@ export class AppComponent {
       this.store.dispatch({type:'SUPER_SIMPLE_EFFECT',payload:{seconds:2}});
   }
 
+  sendPayloadToEffect() {
+     this.store.dispatch({ type: "SEND_PAYLOAD_TO_EFFECT", payload: {message: "The component says hello!" }});
+  }
+
+  setTimer() {
+      this.store.dispatch({ type: "SET_TIMER", payload: {seconds: 10 }});
+  }
+
 }
