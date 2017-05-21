@@ -6,6 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { StoreModule } from "@ngrx/store";
+import { mainReducer } from './state-management/reducers/main-reducer';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +18,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.provideStore({ mainReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
