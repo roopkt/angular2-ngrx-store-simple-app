@@ -32,4 +32,8 @@ export class AppComponent {
    this.store.dispatch({type:DECREMENT,payload:{innerObj:{text:'drep!'}}});
   }
 
+  superSimpleEffect() {
+      this.store.dispatch({type:'SUPER_SIMPLE_EFFECT',payload:{seconds:2}});
+  }
+
 }

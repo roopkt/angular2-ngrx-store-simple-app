@@ -28,4 +28,9 @@ Before running the tests make sure you are serving the app via `ng serve`.
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## In order to Installing Ngrx / Effects
-npm install @ngrx/effects --save
+`npm install @ngrx/effects --save`
+
+## Store dev tools
+
+To see the state and action in chrome extension. Install store devtools extension in chrome and then install in your app aswell. 
+`npm install @ngrx/store-devtools --save`

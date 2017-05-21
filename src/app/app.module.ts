@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from "@ngrx/store";
 import {EffectsModule} from '@ngrx/effects';
 import { mainReducer } from './state-management/reducers/main-reducer';
-
+import { MainEffects } from "app/state-management/effects/main-effects";
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { mainReducer } from './state-management/reducers/main-reducer';
     HttpModule,
     AppRoutingModule,
     StoreModule.provideStore({ mainReducer }),
-    EffectsModule.run(MainEffects)
+    EffectsModule.run(MainEffects),
+    StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],
   providers: [],
   bootstrap: [AppComponent]
