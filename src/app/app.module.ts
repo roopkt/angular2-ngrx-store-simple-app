@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { StoreModule } from "@ngrx/store";
+import {EffectsModule} from '@ngrx/effects';
 import { mainReducer } from './state-management/reducers/main-reducer';
 
 
@@ -19,7 +20,8 @@ import { mainReducer } from './state-management/reducers/main-reducer';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    StoreModule.provideStore({ mainReducer })
+    StoreModule.provideStore({ mainReducer }),
+    EffectsModule.run(MainEffects)
   ],
   providers: [],
   bootstrap: [AppComponent]
